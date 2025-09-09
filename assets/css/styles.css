@@ -191,7 +191,6 @@ img { max-width: 100%; display: block; }
 }
 .tile .tile-content {
   padding: 20px;
-  backdrop-filter: saturate(140%) blur(6px);
 }
 .tile-a { background: linear-gradient(120deg, #0ea5e9, #6366f1); }
 .tile-b { background: linear-gradient(120deg, #10b981, #22c55e); }
@@ -307,6 +306,11 @@ img { max-width: 100%; display: block; }
 
 #products .tile-c {
   background: transparent;
+  border-radius: 0;
+}
+#products .tile-c .tile-image-wrap {
+  background: none;
+  border-radius: 0;
 }
 
 @keyframes gradientShift {
@@ -707,3 +711,13 @@ img { max-width: 100%; display: block; }
 :root[data-theme="dark"] .hero .cta.primary, .theme-dark .hero .cta.primary { background: #ffffff; color: #000000; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 6px 16px rgba(0,0,0,.08); transition: background-color .15s ease, filter .15s ease, transform .15s ease, box-shadow .15s ease; }
 :root[data-theme="dark"] .hero .cta.primary:hover, .theme-dark .hero .cta.primary:hover { background: #f6f6f7; transform: translateY(-1px); box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 10px 22px rgba(0,0,0,.12); }
 :root[data-theme="dark"] .hero .cta.primary:active, .theme-dark .hero .cta.primary:active { transform: translateY(0); filter: brightness(.97); }
+
+#products .tile-c .tile-content {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
