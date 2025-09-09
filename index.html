@@ -6,9 +6,15 @@
     <meta name="description" content="Helix Code Hub – Explore modern code tools and insights with Apple-inspired design.">
     <title>Helix Code Hub</title>
 
+    <meta name="color-scheme" content="light dark">
+    <script>!function(){try{var k='hch-theme',d=document.documentElement,s=localStorage.getItem(k)||'light';d.setAttribute('data-theme',s);d.classList.toggle('theme-dark',s==='dark');d.classList.toggle('theme-light',s==='light');}catch(e){}}();</script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=3">
     <link rel="icon" type="image/jpeg" sizes="32x32" href="./HelixCodeHubLogo.jpg">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0f">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -28,9 +34,7 @@
 
         <nav id="primary-navigation" class="primary-nav" aria-label="Primary">
           <ul>
-            <li><a href="#store">Store</a></li>
             <li><a href="#products">Products</a></li>
-            <li><a href="#insights">Insights</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#footer">Support</a></li>
           </ul>
@@ -45,50 +49,19 @@
           <p class="subhead">Discover tools, frameworks, and insights that elevate your craft.</p>
           <div class="cta-group">
             <a class="cta primary" href="#products">Explore products</a>
-            <a class="cta secondary" href="#insights">Read insights</a>
           </div>
-        </div>
-      </section>
-
-      <section id="store" class="promo promo-dark" aria-label="Promotions">
-        <div class="promo-inner">
-          <h2>Curated for creators</h2>
-          <p>Handpicked bundles to accelerate your next build.</p>
-          <a class="link" href="#products">Shop the collection</a>
         </div>
       </section>
 
       <section id="products" class="tiles" aria-label="Featured products">
-        <article class="tile tile-a">
-          <div class="tile-content">
-            <h3>Framework Essentials</h3>
-            <p>Starter templates for modern stacks.</p>
-            <a class="link" href="#">View templates</a>
-          </div>
-        </article>
-        <article class="tile tile-b">
-          <div class="tile-content">
-            <h3>Design Systems</h3>
-            <p>Beautiful, accessible components.</p>
-            <a class="link" href="#">Browse systems</a>
-          </div>
-        </article>
         <article class="tile tile-c">
           <div class="tile-content">
-            <h3>Dev Utilities</h3>
-            <p>CLI tools and productivity kits.</p>
-            <a class="link" href="#">See utilities</a>
+            <img class="tile-image" src="./github-mark-white.svg" alt="GitHub mark">
+            <h3>Projects</h3>
+            <p>See what we are building and join us if you like it</p>
+            <a class="link" href="https://github.com/Helix-Code-Hub">Take a look</a>
           </div>
         </article>
-      </section>
-
-      <section id="insights" class="split" aria-label="Insights">
-        <div class="split-media" role="img" aria-label="Elegant code on dark screen"></div>
-        <div class="split-content">
-          <h2>Less noise. More signal.</h2>
-          <p>Deep dives and guides crafted for clarity. Learn patterns used by top teams without the fluff.</p>
-          <a class="cta tertiary" href="#">Explore articles</a>
-        </div>
       </section>
 
       <section id="about" class="about" aria-label="About Helix Code Hub">
@@ -100,13 +73,11 @@
     </main>
 
     <footer id="footer" class="site-footer" role="contentinfo">
-      <div class="footer-top">
+      <!-- <div class="footer-top">
         <div class="footer-col">
           <h3>Explore</h3>
           <ul>
-            <li><a href="#store">Store</a></li>
             <li><a href="#products">Products</a></li>
-            <li><a href="#insights">Insights</a></li>
             <li><a href="#about">About</a></li>
           </ul>
         </div>
@@ -127,12 +98,13 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="footer-bottom">
         <p>© <span id="year"></span> Helix Code Hub. All rights reserved.</p>
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false" title="Toggle light/dark">◑</button>
       </div>
     </footer>
 
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/script.js?v=3"></script>
   </body>
 </html>
