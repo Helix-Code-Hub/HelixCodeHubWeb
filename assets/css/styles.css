@@ -763,3 +763,18 @@ img { max-width: 100%; display: block; }
     padding-bottom: 24px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme="dark"] body .about .cta.primary,
+  body.theme-dark .about .cta.primary,
+  html.theme-dark body .about .cta.primary,
+  body[data-theme="dark"] .about .cta.primary,
+  .about .cta.primary.theme-dark,
+  .about .cta.primary[data-theme="dark"] {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid rgba(0,0,0,.08) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 6px 16px rgba(0,0,0,.08) !important;
+    transition: background-color .15s ease, filter .15s ease, transform .15s ease, box-shadow .15s ease !important;
+  }
+}
